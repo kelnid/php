@@ -39,7 +39,7 @@ if (isset($_FILES['photo'])) {
 <div style="margin: 50px">
     <div>Название товара: <?php echo $productName ? ucfirst($productName) : 'Некорректное значение' ?></div>
     <div>Производитель товара: <?php echo $productManufacturer ? ucfirst($productManufacturer) :'Некорректное значение' ?></div>
-    <div>Описание товара: <?php echo $productAbout ? ucfirst($productAbout) : 'Некорректное значение' ?></div>
+    <div>Краткая х-ка: <?php echo $productAbout ? ucfirst($productAbout) : 'Некорректное значение' ?></div>
     <div>
         <img src="uploads/<?php echo $filename?>" width="100px" height="100px" alt="image">
     </div>
