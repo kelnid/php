@@ -38,7 +38,7 @@
         <input type="text" id="product-name" name="product-name">
         <label for="manufacturer">Производитель товара</label>
         <input type="text" id="manufacturer" name="manufacturer">
-        <label for="about">Краткое описание товара</label>
+        <label for="about">Краткая х-ка</label>
         <input type="text" id="about" name="about">
         <label for="photo">Фото товара</label>
         <input type="file" id="photo" name="photo">
