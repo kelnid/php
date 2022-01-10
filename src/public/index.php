@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="form">
+<div>
     <h1>Задание 1</h1>
     <form action="city.php" method="GET">
         <label>Введите город <input type="text" name="city"></label>
@@ -33,7 +33,7 @@
 </div>
 <div>
     <h1>Задание 3</h1>
-    <form method="post" action="product.php" enctype="multipart/form-data" class="form">
+    <form method="post" action="product.php" enctype="multipart/form-data">
         <label for="product-name">Название товара</label>
         <input type="text" id="product-name" name="product-name">
         <label for="manufacturer">Производитель товара</label>
@@ -47,7 +47,7 @@
 </div>
 <div>
     <h1>Задание 4</h1>
-    <form method="post" action="test.php" class="form-four">
+    <form method="post" action="test.php">
         <div>
             <strong>Вопрос №1:</strong>
             <p>«Работая вместе, Тому, Дику и Гарри надо 9 часов, чтобы закрасить 400-метровый забор. </p>
