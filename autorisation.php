@@ -1,15 +1,12 @@
 <?php
 session_start();
-//session_destroy();
-//echo $_SESSION['login'], "<br/>";
-//echo $_SESSION['password'];
 
 if(isset($_POST['do_login'])) {
 
-    $errors = array();
+    $errors = [];
 
     if ($_SESSION['password'] === md5($_POST['password'])){
-        echo "<div style='color: green;'>Вы успешно авторизованы,можете перейти в <a href='home.php'>Профиль</a></div>";
+        header('Location: home.php');
     } else {
         $errors[] = 'Данные введены неверно!';
     }
@@ -20,7 +17,9 @@ if(isset($_POST['do_login'])) {
         $errors[] = 'Введите пароль!';
     }
     if (!empty($errors)) {
-        echo "<div style='color: red;'>" . array_shift($errors) . "</div>";
+        foreach($errors as $elem) {
+            echo "<div style='color: red;'>".$elem."</div>";
+        }
     }
 }
 ?>
@@ -28,7 +27,7 @@ if(isset($_POST['do_login'])) {
 <form action="autorisation.php" method="post">
     <p>
     <p><strong>Логин:</strong></p>
-    <input type="text" name="login" value="">
+    <input type="text" name="login" value="<?php echo isset($_COOKIE['login']) ? $_COOKIE['login'] : '' ?>">
     </p>
     <p>
     <p><strong>Пароль:</strong></p>
